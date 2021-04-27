@@ -1,0 +1,574 @@
+:root {
+	--ikhokha-pre-color: #4296cb;
+	--ikhokha-dark-color: #394e5d;
+	--ikhokha-black-color: #182333;
+	--ikhokha-light-color: #f5f8fa;
+	--ikhokha-white-color: #ffffff;
+	--lh: 1.4rem;
+}
+#ikhokha {
+	overflow: hidden;
+}
+#ikhokha .bg-pre-color {
+	background-color: var(--ikhokha-pre-color);
+}
+#ikhokha .main-content {
+	height: 100%;
+	min-height: 100vh;
+}
+
+#ikhokha h1,
+#ikhokha h2,
+#ikhokha h3 #ikhokha h4,
+#ikhokha h5,
+#ikhokha h6 #ikhokha p,
+#ikhokha a,
+#ikhokha .btn {
+	font-family: 'Montserrat', sans-serif;
+}
+#ikhokha li.nav-item {
+	position: relative;
+}
+#ikhokha .nav-link.active::after {
+	content: " ";
+	position: absolute;
+	line-height: 0;
+	top: 95%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: var(--ikhokha-pre-color);
+	height: 10px;
+	width: 20px;
+	border-top-left-radius: 90px;
+	border-top-right-radius: 90px;
+}
+#ikhokha .nav-link:hover::after {
+	content: " ";
+	position: absolute;
+	line-height: 0;
+	top: 95%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: var(--ikhokha-pre-color);
+	height: 10px;
+	width: 20px;
+	border-top-left-radius: 90px;
+	border-top-right-radius: 90px;
+	opacity: 0.5;
+}
+#ikhokha #loading {
+	/* margin-top: 5rem; */
+	height: 100vh;
+	position: relative;
+}
+#ikhokha #loading img {
+	line-height: 1.2;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 25%;
+}
+
+#ikhokha h2 {
+	font-size: 32px;
+	line-height: 1.2;
+	color: var(--ikhokha-dark-color);
+	font-weight: 700;
+	text-align: center;
+}
+#ikhokha h4 {
+	font-size: 20px;
+	line-height: 1.2;
+	color: var(--ikhokha-dark-color);
+	font-weight: 700;
+}
+#ikhokha h5 {
+	font-size: 20px;
+	line-height: 1.2;
+	color: var(--ikhokha-dark-color);
+	font-weight: 600;
+}
+#ikhokha p {
+	font-size: 18px;
+	line-height: 1.4;
+	color: var(--ikhokha-dark-color);
+	font-weight: 400;
+	text-align: left;
+}
+#ikhokha a {
+	color: var(--ikhokha-dark-color);
+	font-weight: 600;
+}
+#ikhokha .btn {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--ikhokha-pre-color);
+	background-color: transparent;
+	border: 1px solid var(--ikhokha-pre-color);
+	border-radius: 32px;
+	display: inline-block;
+	text-align: center;
+	padding: 14px 39px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+#ikhokha .btn {
+	font-size: 14px;
+	font-weight: 600;
+	background-color: var(--ikhokha-white-color);
+	color: var(--ikhokha-pre-color);
+
+	border: 1px solid var(--ikhokha-pre-color);
+	border-radius: 32px;
+	display: inline-block;
+	text-align: center;
+	padding: 14px 39px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+#ikhokha .btn-black {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--ikhokha-white-color);
+	background-color: var(--ikhokha-dark-color);
+
+	border: 1px solid var(--ikhokha-dark-color);
+	border-radius: 32px;
+	display: inline-block;
+	text-align: center;
+	padding: 14px 39px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+#ikhokha .btn:hover {
+	color: var(--ikhokha-white-color);
+	background-color: var(--ikhokha-pre-color);
+}
+#ikhokha .btn-black:hover {
+	color: var(--ikhokha-dark-color);
+	background-color: var(--ikhokha-white-color);
+}
+#ikhokha .navbar {
+	position: absolute;
+	width: 100%;
+	z-index: 25;
+	-webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 8%);
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 8%);
+	background-color: var(--ikhokha-white-color);
+}
+#ikhokha .nav-link {
+	font-size: 22px;
+}
+
+div#PageHeader .Header {
+	margin-top: 4rem;
+	padding: 4.2rem !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%233871a0' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#ikhokha .Landing-page {
+	height: 90vh;
+	min-height: 90vh;
+}
+#ikhokha .welcomeContent {
+	position: absolute;
+	width: 66rem;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 30%;
+}
+#ikhokha .welcomeContent .WelcomeCopy {
+	margin-top: 5rem;
+}
+#ikhokha .welcomeContent .WelcomeCopy h1 {
+	color: var(--ikhokha-dark-color);
+	font-weight: 600;
+	text-align: left;
+	letter-spacing: 0px;
+	opacity: 1;
+	font-size: 46px;
+	line-height: 1.4;
+}
+
+#ikhokha .welcomeContent .WelcomeCopy p {
+	font-size: 22px;
+	line-height: 1.2;
+}
+
+#ikhokha .Products {
+	height: 80vh;
+}
+#ikhokha .productContent .productCopy {
+	text-align: left;
+}
+#ikhokha .productContent .productCopy p {
+	line-height: 1.8;
+	width: 89%;
+}
+
+#ikhokha #brands {
+	background-color: var(--ikhokha-light-color);
+	margin: 5rem 0 11rem 0;
+}
+
+#ikhokha #brands .logo {
+	display: flex;
+	justify-content: initial;
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+}
+#ikhokha #brands .rec.rec-carousel-item {
+	display: flex;
+}
+#ikhokha #brands .brand-logo {
+	width: 80%;
+	justify-content: initial;
+	align-items: center;
+	display: flex;
+	position: relative;
+}
+#ikhokha #brands .logo img {
+	width: fit-content;
+	display: flex;
+	object-fit: contain;
+	margin: auto;
+	position: relative;
+}
+
+#ikhokha .Footer {
+	background-color: var(--ikhokha-pre-color);
+}
+#ikhokha #Products,
+#ikhokha #blogs {
+	margin: 0rem auto 2rem;
+}
+
+#ikhokha #blogs .post:hover,
+#ikhokha #Products .product:hover {
+	box-shadow: 0px 2px 16px #00000029;
+	border-radius: 4px;
+}
+#ikhokha .title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#ikhokha #blogs .post p {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--ikhokha-black-color);
+}
+#ikhokha .description {
+	display: block;
+	display: -webkit-box;
+	max-width: 106%;
+	margin: 0 auto;
+	line-height: 1;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#ikhokha #blogs .description {
+	height: 67px;
+}
+#ikhokha #Products .description {
+	height: 76px;
+}
+#ikhokha #blogs .img-wrap {
+	overflow: hidden;
+	height: 0;
+	padding: 32% 0;
+	position: relative;
+}
+#ikhokha #blogs .img-wrap {
+	overflow: hidden;
+	height: 0;
+	padding: 32% 0;
+	position: relative;
+	border-radius: 3%;
+}
+#ikhokha #Products .img-wrap {
+	overflow: hidden;
+	height: 0;
+	padding: 45% 0;
+	position: relative;
+	border-radius: 3%;
+}
+#ikhokha #productPostData .product-image {
+	margin: auto;
+	display: inherit;
+}
+#ikhokha #productPostData .brand-image {
+	width: 20%;
+}
+#ikhokha .img-wrap img {
+	min-width: 92%;
+	min-height: 100%;
+	max-width: 106%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 3px;
+}
+
+#ikhokha #Contact .contact {
+	background-color: var(--ikhokha-dark-color);
+	padding: 40px 40px 40px 40px;
+}
+#ikhokha .contact .title h2 {
+	color: var(--ikhokha-white-color);
+	font-weight: 700;
+	text-align: left;
+}
+#ikhokha #Contact .content-icon i {
+	font-size: 25px;
+}
+#ikhokha #Contact .contactInfo {
+	border-bottom: 1px dashed #ffffff;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	display: flex;
+}
+#ikhokha #Contact .contact-from {
+	background-color: #f3f6ff;
+}
+
+#ikhokha #Contact .contact-from h2 {
+	text-align: left;
+}
+#ikhokha #Contact p {
+	margin-bottom: 0.5rem;
+}
+#ikhokha .map {
+	overflow: hidden;
+	height: 0;
+	padding: 10% 0;
+	position: relative;
+}
+iframe {
+	min-width: 117%;
+	min-height: 100%;
+	max-width: 118%;
+	position: absolute;
+	top: 0;
+	left: 0%;
+	border-radius: 3px;
+}
+
+/* user-login */
+
+#ikhokha .userLogin {
+	position: absolute;
+	left: 89vw;
+	right: 0;
+	margin: 0 auto;
+	width: 9%;
+}
+
+/* form Styles  */
+
+#ikhokha select,
+#ikhokha .form-control {
+	height: 54px;
+	background-color: #fff;
+	border-color: transparent;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	border: 1px solid #e6e6e6;
+	padding: 6px 20px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 5px;
+}
+#ikhokha textarea.form-control {
+	height: auto;
+}
+@media (min-width: 2000px) {
+	#ikhokha .welcomeContent {
+		width: 45%;
+	}
+
+	#ikhokha .Products {
+		height: 65vh;
+	}
+}
+@media (max-width: 1199px) {
+	#ikhokha .userLogin {
+		left: 83vw;
+		width: 9%;
+	}
+	#ikhokha .welcomeContent {
+		width: 56rem;
+		top: 30%;
+	}
+
+	#ikhokha .welcomeContent .WelcomeCopy h1 {
+		font-size: 38px;
+	}
+	#ikhokha .welcomeContent .WelcomeCopy p {
+		font-size: 16px;
+	}
+	#ikhokha #brands {
+		margin: 5rem 0 6rem 0;
+	}
+
+	#ikhokha #blogs .card p {
+		font-size: 14px;
+	}
+	#ikhokha h5 {
+		font-size: 16px;
+	}
+	#ikhokha .map {
+		overflow: hidden;
+		height: 0;
+		padding: 15% 0;
+		position: relative;
+	}
+}
+@media (max-width: 991px) {
+	div#PageHeader .Header {
+		margin-top: 4rem;
+		padding: 3.4rem !important;
+	}
+	#ikhokha .userLogin {
+		position: relative;
+		left: 0;
+		right: 0;
+		margin: 0;
+	}
+
+	#ikhokha .nav-link.active::after {
+		content: " ";
+		top: 37%;
+		left: 0;
+		right: 50%;
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+	}
+
+	#ikhokha .nav-link:hover::after {
+		content: " ";
+		top: 37%;
+		left: 0;
+		right: 50%;
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		opacity: 0.8;
+	}
+
+	#ikhokha p {
+		font-size: 16px;
+	}
+
+	#ikhokha .welcomeContent {
+		width: 92%;
+		top: 30%;
+	}
+
+	#ikhokha .welcomeContent .WelcomeCopy h1 {
+		font-size: 34px;
+	}
+	#ikhokha .productContent .productCopy p {
+		width: 100%;
+	}
+
+	#ikhokha .Products {
+		height: 72vh;
+	}
+
+	#ikhokha #brands .logo img {
+		width: 15% !important;
+	}
+	#ikhokha #Products .description {
+		height: 69px;
+	}
+
+	#ikhokha #brands .logo img {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 767px) {
+	#ikhokha h2 {
+		font-size: 6.9vw;
+	}
+	#ikhokha h4 {
+		font-size: 6vw;
+		line-height: 1.2;
+		color: var(--ikhokha-dark-color);
+		font-weight: 700;
+	}
+	#ikhokha p {
+		font-size: 4.5vw;
+	}
+	#ikhokha .userLogin {
+		width: 13%;
+	}
+	#ikhokha #loading {
+		margin-top: 5rem;
+		height: 81vh;
+	}
+	#ikhokha .loading img {
+		width: 50%;
+	}
+	div#PageHeader .Header {
+		margin-top: 4rem;
+		padding: 1.4rem !important;
+	}
+
+	/* #ikhokha .navbar-brand {
+		margin: 0 42% 0 0px;
+	} */
+
+	#ikhokha .welcomeContent {
+		position: relative;
+		width: 90%;
+		top: 6%;
+	}
+	#ikhokha .welcomeContent .WelcomeCopy h1 {
+		font-size: 8vw;
+	}
+	#ikhokha .welcomeContent .WelcomeCopy {
+		margin-top: 3rem;
+		margin-bottom: 4rem;
+	}
+
+	#ikhokha .welcomeContent .WelcomeCopy p {
+		font-size: 4.5vw;
+	}
+
+	#ikhokha .productContent .productCopy {
+		text-align: left;
+		width: 93%;
+		margin: 0 auto;
+	}
+
+	#ikhokha #blogs {
+		margin: 0rem auto;
+	}
+
+	#ikhokha #brands {
+		margin: 9rem 0 5rem 0;
+	}
+
+	#ikhokha .map {
+		overflow: hidden;
+		height: 0;
+		padding: 34% 0;
+		position: relative;
+	}
+}
