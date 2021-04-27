@@ -17,6 +17,7 @@ import ProductDisplayPage from './component/Pages/ProductDisplayPage';
 import SignIn from './component/Pages/SignIn';
 import AuthContextProvider from './context/AuthContext';
 import BlogSection from './component/Pages/LandingPage/BlogSection';
+import Slider from './component/util/Slider';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
                 <Route path="/post-product/:id" component={PostProducts} />
                 <Route path="/sign-in" component={SignIn} />
                 <BlogSection />
-
+                <Slider />
               </Switch>
               <Footer />
             </div>
