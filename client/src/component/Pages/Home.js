@@ -21,7 +21,7 @@ const Home = () => {
                 <CoverSection />
                 <ProductSection />
                 <Slider sliders={productsData} />
-                <BlogSection blogData={blogData} />
+                <BlogSection />
             </div> : <Loading />}
 
 

@@ -15,13 +15,18 @@ const BlogDisplayPage = ({ match }) => {
     useEffect(() => {
         getBlogPost(match.params.id);
     }, [])
-
+    if (!loadingData) return null;
+    console.log(loadingData)
     return (
         <div id="BlogDisplayPage" className="">
             {loadingData ?
+
                 <div id="" className="container-fluid">
-                    <PageHeader heading={blogPostData.data.blogHeading} />
-                    <div id="" className="container">
+
+                    {loadingData &&
+                        <PageHeader heading={blogPostData.data.blogHeading} />
+                    }
+                    {loadingData && <div id="" className="container">
                         <div className="row">
                             <div className="col-sm-8 col-12 mx-auto">
                                 <img className="img-fluid" src={blogPostData.data.image} alt={blogPostData.data.blogHeading} />
@@ -37,8 +42,10 @@ const BlogDisplayPage = ({ match }) => {
                                     </div>
                                 </div> : null}
                         </div>
-                    </div>
+                    </div>}
                 </div>
+
+                // null
                 : <Loading />}
         </div>
     );

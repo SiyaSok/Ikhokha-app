@@ -19,7 +19,7 @@ const ProductDisplayPage = ({ match }) => {
     return (<div id="productPostData">
         {loadingData ?
             <div id="" className="container-fluid">
-                <PageHeader heading={productPostData.data.productName} />
+                <PageHeader heading={loadingData ? productPostData.data.productName : null} />
                 <div id="" className="container my-4">
                     <div className="row">
                         <div className="col-sm-6 col-12 mx-auto">

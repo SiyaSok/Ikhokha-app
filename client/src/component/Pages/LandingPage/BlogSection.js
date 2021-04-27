@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom'
+import { BlogContext } from '../../../context/BlogContext';
 
 import useWindowDimensions from '../../util/srceensize';
 
 
-const BlogSection = ({ blogData }) => {
+const BlogSection = () => {
+    const { blogData } = useContext(BlogContext);
+
     const { width } = useWindowDimensions();
 
-    const [blogItems, setBlogItems] = useState({})
+
+
+    const [blogItems, setBlogItems] = useState([])
     useEffect(() => {
         const blogs = width <= 550 ? blogData.slice(0, 2) : blogData.slice(0, 5)
         setBlogItems(blogs);
     }, [width])
 
 
-    // if (!blogItems) return null
+    if (!blogItems) return null
 
     return (<div id="blogs" className="container-xl">
 

@@ -20,12 +20,15 @@ const Products = () => {
         {  loadingData ?
 
             <div id="Products" className="container-fluid main-content">
-                <PageHeader heading={`Cool products: 2021 pick.`}
-                    subText={`Welcome to our regularly updated curation of the coolest, smartest kit money can buy.`} />
+                {
+                    loadingData &&
+                    <PageHeader heading={`Cool products: 2021 pick.`}
+                        subText={`Welcome to our regularly updated curation of the coolest, smartest kit money can buy.`} />
+                }
                 <div className="container-xl">
                     {user ? <NewPostBtns /> : null}
                     <div className="row mx-2">
-                        {productsData.map((Product) => (
+                        {productsData && productsData.map((Product) => (
                             <div key={Product._id} className="col-sm-3 col-12 my-5">
                                 <div className="product border-0" >
                                     <Link to={`/products/${Product._id}`}>
