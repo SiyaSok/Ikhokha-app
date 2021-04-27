@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 import { ProductContext } from '../../context/ProductContext';
 
@@ -6,6 +6,7 @@ import { ProductContext } from '../../context/ProductContext';
 const Slider = () => {
     const { productsData } = useContext(ProductContext);
 
+    const [logos, setLogos] = useState({});
     const breakPoints = [
         { width: 1, itemsToShow: 1, showArrows: false },
         {
@@ -22,7 +23,7 @@ const Slider = () => {
 
 
     if (!productsData) return null;
-    const logos = productsData.slice(0, 5);
+    // setLogos (productsData.slice(0, 5);
 
     return (
 
@@ -35,7 +36,7 @@ const Slider = () => {
                         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={2000} easing="cubic-bezier(1,.15,.55,1.54)"
                             tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
                             transitionMs={700}>
-                            {logos.map(logo => <div className="brand-logo" key={logo._id}>
+                            {productsData.slice(0, 5).map(logo => <div className="brand-logo" key={logo._id}>
                                 <img className="img-fluid" src={logo.brand} alt={logo.productName} />
 
                             </div>)}

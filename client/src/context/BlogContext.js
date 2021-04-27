@@ -9,6 +9,8 @@ const BlogContextProvider = ({ children }) => {
 
 
     const [blogData, setBlogData] = useState({});
+    const [logos, setLogos] = useState({});
+
     const [blogPostData, setBlogPostData] = useState({});
     const [loadingData, setLoadingData] = useState(false);
     const [postData, setPostData] = useState({ blogHeading: "", authorSocialMediaHandle: "", blogText: "", image: "" });
@@ -23,8 +25,7 @@ const BlogContextProvider = ({ children }) => {
             const res = await API.get('/blog-posts');
             if (!res.data) return null
             setLoadingData(true);
-
-            console.log(res.data)
+            setBlogPostData(res.data.slice(0, 5))
             setBlogData(res.data);
 
         }
@@ -102,7 +103,8 @@ const BlogContextProvider = ({ children }) => {
                 postData,
                 blogData,
                 blogPostData,
-                loadingData
+                loadingData,
+                logos
             }}>
             {children}
         </BlogContext.Provider>
