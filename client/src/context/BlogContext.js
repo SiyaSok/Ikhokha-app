@@ -8,10 +8,11 @@ export const BlogContext = createContext();
 const BlogContextProvider = ({ children }) => {
 
 
-    const [blogData, setBlogData] = useState({});
+    const [blogData, setBlogData] = useState('');
     const [logos, setLogos] = useState({});
 
-    const [blogPostData, setBlogPostData] = useState({});
+    const [blogPost, setBlogPost] = useState('');
+    const [blogPostData, setBlogPostData] = useState('');
     const [loadingData, setLoadingData] = useState(false);
     const [postData, setPostData] = useState({ blogHeading: "", authorSocialMediaHandle: "", blogText: "", image: "" });
     const user = JSON.parse(localStorage.getItem('profile'));
@@ -25,8 +26,9 @@ const BlogContextProvider = ({ children }) => {
             const res = await API.get('/blog-posts');
             if (!res.data) return null
             setLoadingData(true);
-            setBlogPostData(res.data.slice(0, 5))
+            // setBlogPostData(res.data.slice(0, 5))
             setBlogData(res.data);
+            console.log(res.data);
 
         }
         catch (error) {
@@ -40,8 +42,6 @@ const BlogContextProvider = ({ children }) => {
             const res = await API.get(`/blog-posts/${id}`);
             if (!res.data) return null
             setLoadingData(true);
-            console.log(res.data)
-            setBlogPostData(res.data);
 
         }
         catch (error) {
@@ -100,6 +100,8 @@ const BlogContextProvider = ({ children }) => {
                 postBLog,
                 deletBlogPost,
                 updateBlogPost,
+                setBlogPost,
+                blogPost,
                 postData,
                 blogData,
                 blogPostData,

@@ -6,7 +6,6 @@ import { ProductContext } from '../../context/ProductContext';
 const Slider = () => {
     const { productsData } = useContext(ProductContext);
 
-    const [logos, setLogos] = useState({});
     const breakPoints = [
         { width: 1, itemsToShow: 1, showArrows: false },
         {
@@ -20,18 +19,10 @@ const Slider = () => {
         { width: 1200, itemsToShow: 5, pagination: false, showArrows: false }
     ];
 
-
-
-    if (!productsData) return null;
-    // setLogos (productsData.slice(0, 5);
-
     return (
-
-
-
         <div id="brands" className=" brands p-5 ">
             <div className="container-xl">
-                {logos &&
+                {productsData &&
                     <div className="logo">
                         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={2000} easing="cubic-bezier(1,.15,.55,1.54)"
                             tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"

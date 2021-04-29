@@ -6,7 +6,7 @@ const ProductSection = () => {
             <div className="container Products text-center">
                 <div className="row">
                     <div className="productHeading my-5 col-12">
-                        <h2>Lorem ipsum something</h2>
+                        <h2>Tech, Products and Blogs</h2>
                     </div>
                 </div>
                 <div className="row my-5">

@@ -38,7 +38,7 @@ const Blogs = () => {
                                                 <img src={Post.image} className="" alt="..." />
                                             </div>
                                         </Link>
-                                        <div class="px-md-2 py-4">
+                                        <div className="px-2 py-4">
                                             <h5 className="title">{Post.blogHeading}</h5>
                                             <div className="description">
                                                 <p>{Post.blogText}</p>

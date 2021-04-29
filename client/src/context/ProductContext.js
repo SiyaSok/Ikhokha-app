@@ -7,8 +7,8 @@ export const ProductContext = createContext();
 
 const ProductContextProvider = ({ children }) => {
 
-    const [productsData, setProductsData] = useState({});
-    const [productPostData, setProductPostData] = useState({});
+    const [productsData, setProductsData] = useState('');
+    const [productPostData, setProductPostData] = useState('');
     const [loadingData, setLoadingData] = useState(false);
     const [postData, setPostData] = useState({ productName: "", productDescription: "", shopURl: "", image: "", brand: "" });
 
@@ -38,7 +38,7 @@ const ProductContextProvider = ({ children }) => {
             const res = await API.get(`/products-posts/${id}`);
             if (!res.data) return null
             console.log(res.data)
-            setProductPostData(res.data);
+            // setProductPostData(res.data);
 
         }
         catch (error) {
@@ -103,7 +103,8 @@ const ProductContextProvider = ({ children }) => {
                 postProduct,
                 updateProductPost,
                 getProductPost,
-                deletProductPost
+                deletProductPost,
+                setProductPostData
             }}>
             {children}
         </ProductContext.Provider>

@@ -10,7 +10,7 @@ import ProductSection from './LandingPage/ProductSection';
 
 
 const Home = () => {
-    const { blogData, loadingData } = useContext(BlogContext);
+    const { loadingData } = useContext(BlogContext);
     const { productsData } = useContext(ProductContext);
 
 
@@ -20,7 +20,7 @@ const Home = () => {
             {loadingData && productsData ? <div>
                 <CoverSection />
                 <ProductSection />
-                <Slider sliders={productsData} />
+                <Slider />
                 <BlogSection />
             </div> : <Loading />}
 

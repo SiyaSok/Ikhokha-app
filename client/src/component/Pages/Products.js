@@ -29,18 +29,23 @@ const Products = () => {
                     {user ? <NewPostBtns /> : null}
                     <div className="row mx-2">
                         {productsData && productsData.map((Product) => (
-                            <div key={Product._id} className="col-sm-3 col-12 my-5">
-                                <div className="product border-0" >
-                                    <Link to={`/products/${Product._id}`}>
+
+                            <div key={Product._id} className="col-sm-3 col-12 my-2 my-sm-5 cursor-pointer">
+                                <Link className="cursor-pointer" to={`/products/${Product._id}`}>
+
+                                    <div className="product border-0" >
+
                                         <div className="img-wrap">
                                             <img src={Product.image} className="" alt={Product.productName} />
                                         </div>
-                                    </Link>
-                                    <div className="px-md-2 py-4 "  >
-                                        <h5 className="title" onDoubleClick={deletProductPost(Product._id)}>{Product.productName}</h5>
-                                        <div className="description"><p> {Product.productDescription}</p></div>
+                                        <div className="px-md-2 px-1  py-4 "  >
+                                            <h5 className="title" onDoubleClick={deletProductPost(Product._id)}>{Product.productName}</h5>
+                                            <div className="description"><p> {Product.productDescription}</p></div>
+                                        </div>
+
                                     </div>
-                                </div>
+                                </Link>
+
                             </div>
                         ))}
 

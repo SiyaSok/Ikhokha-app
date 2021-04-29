@@ -26,6 +26,11 @@
 #ikhokha .btn {
 	font-family: 'Montserrat', sans-serif;
 }
+
+#ikhokha a {
+	text-decoration: none;
+}
+
 #ikhokha li.nav-item {
 	position: relative;
 }
@@ -60,7 +65,7 @@
 }
 #ikhokha #loading {
 	/* margin-top: 5rem; */
-	height: 100vh;
+	height: 93.2vh;
 	position: relative;
 }
 #ikhokha #loading img {
@@ -68,7 +73,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 25%;
+	top: 30%;
 }
 
 #ikhokha h2 {
@@ -175,7 +180,7 @@ div#PageHeader .Header {
 
 #ikhokha .Landing-page {
 	height: 90vh;
-	min-height: 90vh;
+	min-height: 95vh;
 }
 #ikhokha .welcomeContent {
 	position: absolute;
@@ -494,7 +499,7 @@ iframe {
 		width: 15% !important;
 	}
 	#ikhokha #Products .description {
-		height: 69px;
+		height: 80px;
 	}
 
 	#ikhokha #brands .logo img {

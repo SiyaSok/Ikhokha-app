@@ -45,7 +45,7 @@ const SignIn = () => {
 
     return (
 
-        <div className="mx-auto container-fluid text-center">
+        <div className="mx-auto container-fluid text-center main-content">
 
             <PageHeader
                 heading={!newUser ? `Welcome Back` : `Newbie`}
@@ -129,8 +129,8 @@ const SignIn = () => {
                         className="btn "
                         onClick={SignIn}
                     >Sign In</button>}
-                    {newUser ? <p className="text-center my-3" onClick={() => setNewUser(false)}>I have an account. I want to Login.</p> :
-                        <p className="text-center my-3" onClick={() => setNewUser(true)}>No account? Create one here</p>
+                    {newUser ? <p className="text-center my-3 cursor-pointer" onClick={() => setNewUser(false)}>I have an account. I want to Login.</p> :
+                        <p className="text-center my-3 mx-4 cursor-pointer" onClick={() => setNewUser(true)}>No account? Create one here</p>
 
                     }
                 </form>
